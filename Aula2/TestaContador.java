@@ -3,5 +3,7 @@ public class TestaContador {
         Contador c1 = new Contador();
         c1.incrementar();
         System.out.printf("C1: %d", c1.valor);
+        c1.zerar();
+        System.out.printf("C1: %d", c1.valor);
     }
 }

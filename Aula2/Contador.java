@@ -2,14 +2,16 @@ public class Contador {
     int valor;
 
     public Contador(){
-        valor = 0;
+        this.valor = 0;
     }
 
-    public void zerar(){
+    public int zerar(){
         valor = 0;
+        return valor;
     }
 
-    public void incrementar(){
+    public int incrementar(){
         valor++;
+        return valor;
     }
 }
