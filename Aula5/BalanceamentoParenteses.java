@@ -1,5 +1,3 @@
-package Aula4;
-
 import java.util.Scanner;
 
 public class BalanceamentoParenteses {
@@ -18,11 +16,10 @@ public class BalanceamentoParenteses {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
-        entrada.close();
     }
 
     public static boolean isBalanceada(String exp) throws Exception {
-        Pilha pilha = new Pilha();
+        Pilha<Character> pilha = new Pilha<Character>();
         char c;
         for (int i = 0; i < exp.length(); i++) {
             c = exp.charAt(i);

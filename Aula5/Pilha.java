@@ -1,14 +1,12 @@
-package Aula4;
-
-public class Pilha {
+public class Pilha <T> {
     // atributos
     private final static int TAM_DEFAULT = 100;
     private int topoPilha;
-    private char elementos[];
+    private T elementos[];
 
     // construtores
     public Pilha(int tamanho) {
-        elementos = new char[tamanho];
+        elementos = (T[]) new Object[tamanho];
         topoPilha = -1;
     }
 
@@ -17,7 +15,7 @@ public class Pilha {
     }
 
     // métodos
-    public void push(char e) throws Exception {
+    public void push(T e) throws Exception {
         if (!isFull()) {
             elementos[++topoPilha] = e;
         }
@@ -26,7 +24,7 @@ public class Pilha {
         }
     }
 
-    public char pop() throws Exception {
+    public T pop() throws Exception {
         if (!isEmpty()) {
             return elementos[topoPilha--];
         }
@@ -35,7 +33,7 @@ public class Pilha {
         }
     }
 
-    public char topo() throws Exception {
+    public T topo() throws Exception {
         if (!isEmpty()) {
             return elementos[topoPilha];
         }
